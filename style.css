@@ -296,6 +296,111 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 section { padding: 90px 24px; }
 
+/* Saç Stilleri gallery */
+.style-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.style-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+[data-theme="dark"] .style-card { background: var(--bg-soft); }
+.style-card-img { height: 200px; overflow: hidden; }
+.style-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.style-card-body { padding: 18px 20px; }
+.style-card h3 { font-family: var(--serif); font-size: 17px; margin: 0 0 6px; }
+.style-card p { font-size: 13.5px; color: var(--text-soft); margin: 0; line-height: 1.55; }
+
+/* Saç önerici (quiz) */
+.quiz {
+  max-width: 640px;
+  margin: 56px auto 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+[data-theme="dark"] .quiz { background: var(--bg-soft); }
+.quiz-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  margin: 0 0 6px;
+  text-align: center;
+}
+.quiz-sub {
+  font-size: 14px;
+  color: var(--text-soft);
+  text-align: center;
+  margin: 0 0 28px;
+}
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.quiz-row { display: flex; gap: 14px; }
+.quiz-field { flex: 1; }
+.quiz-field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+.quiz-field input,
+.quiz-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+[data-theme="dark"] .quiz-field input,
+[data-theme="dark"] .quiz-field select { background: var(--bg); }
+.quiz-submit {
+  margin-top: 8px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.quiz-result {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  display: none;
+}
+.quiz-result.visible { display: block; }
+.quiz-result-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.quiz-result-name {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+[data-theme="dark"] .quiz-result-name { color: var(--gold); }
+.quiz-result-desc { font-size: 14.5px; color: var(--text); margin: 0 0 8px; line-height: 1.6; }
+.quiz-result-why { font-size: 13px; color: var(--text-soft); font-style: italic; margin: 0; }
+
 /* Services — list/menu style (kart yerine satır) */
 .services { background: var(--bg-soft); }
 

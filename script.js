@@ -202,3 +202,76 @@ if (contactForm) {
     }, 700);
   });
 }
+
+// Saç Stilleri sayfası: "Bana En Uygun Saçı Bul" testi
+// Not: Bu bir eğlence/demo aracıdır, bilimsel bir öneri motoru değildir —
+// girilen kriterlere göre deterministik ama "kişiye özel" hissettiren bir sonuç üretir.
+const quizForm = document.getElementById("quizForm");
+
+if (quizForm) {
+  const HAIRSTYLES = [
+    {
+      name: "Uzun Katlı Kesim",
+      desc: "Yüz hatlarını yumuşatan, hacim ve hareket katan katmanlı uzun saç kesimi.",
+    },
+    {
+      name: "Lob (Long Bob)",
+      desc: "Omuz hizasında, şık ve bakımı kolay — hem günlük hem özel günlere uygun.",
+    },
+    {
+      name: "Klasik Bob Kesim",
+      desc: "Keskin hatlarıyla zamansız ve iddialı, her yüz tipine uyum sağlayan kesim.",
+    },
+    {
+      name: "Perçemli Kesim",
+      desc: "Yüzü çerçeveleyen perçemle birlikte, taze ve genç bir görünüm kazandırır.",
+    },
+    {
+      name: "Katmanlı Dalga",
+      desc: "Doğal dalgaları ön plana çıkaran, hacimli ve dinamik bir şekillendirme.",
+    },
+    {
+      name: "Pixie Kesim",
+      desc: "Cesur ve pratik, yüz hatlarını öne çıkaran kısa bir kesim.",
+    },
+    {
+      name: "Balyajlı Uzun Saç",
+      desc: "Güneş görmüş etkisiyle doğal aydınlık katan, bakımı kolay renk geçişi.",
+    },
+    {
+      name: "Fransız Örgü Stili",
+      desc: "Özel günler ve günlük şıklık için pratik, sofistike bir şekillendirme.",
+    },
+  ];
+
+  const quizResult = document.getElementById("quizResult");
+  const quizResultName = document.getElementById("quizResultName");
+  const quizResultDesc = document.getElementById("quizResultDesc");
+  const quizResultWhy = document.getElementById("quizResultWhy");
+
+  quizForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const age = Number(quizForm.age.value) || 25;
+    const height = Number(quizForm.height.value) || 165;
+    const weight = Number(quizForm.weight.value) || 60;
+    const season = quizForm.season.value;
+    const sector = quizForm.sector.value;
+    const hairType = quizForm.hairType.value;
+
+    const seasonIndex = ["İlkbahar", "Yaz", "Sonbahar", "Kış"].indexOf(season);
+    const sectorIndex = ["Kurumsal / Ofis", "Yaratıcı / Serbest", "Spor / Aktif", "Gece Hayatı / Sosyal", "Öğrenci"].indexOf(sector);
+    const hairTypeIndex = ["Düz", "Dalgalı", "Kıvırcık"].indexOf(hairType);
+
+    const score =
+      age * 3 + height * 2 + weight + seasonIndex * 11 + sectorIndex * 17 + hairTypeIndex * 23;
+    const style = HAIRSTYLES[score % HAIRSTYLES.length];
+
+    quizResultName.textContent = style.name;
+    quizResultDesc.textContent = style.desc;
+    quizResultWhy.textContent = `${age} yaşında, ${height} cm boyunda, ${season.toLowerCase()} mevsiminde ${sector.toLowerCase()} bir ortamda öne çıkmak isteyen, ${hairType.toLowerCase()} saç yapısına sahip biri için hesaplanan en uygun stil budur.`;
+
+    quizResult.classList.add("visible");
+    fireConfetti(quizForm.querySelector(".quiz-submit"));
+    quizResult.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+}
