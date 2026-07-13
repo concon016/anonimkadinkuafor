@@ -520,9 +520,13 @@ section { padding: 90px 24px; }
 .testi-grid {
   max-width: var(--max);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: 20px;
+  padding: 4px 4px 16px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
 }
 .testi-card {
   background: var(--bg);
@@ -530,6 +534,8 @@ section { padding: 90px 24px; }
   padding: 26px 24px;
   border: 1px solid var(--border);
   border-top: 3px solid var(--gold);
+  flex: 0 0 300px;
+  scroll-snap-align: start;
 }
 [data-theme="dark"] .testi-card { background: var(--bg-soft); }
 .testi-stars { color: var(--gold); font-size: 15px; margin-bottom: 12px; letter-spacing: 2px; }
@@ -734,7 +740,6 @@ section { padding: 90px 24px; }
 @media (max-width: 860px) {
   .space-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; max-width: 320px; }
-  .testi-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
