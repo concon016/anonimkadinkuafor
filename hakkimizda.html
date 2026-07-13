@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkımızda — Anonim Kadın Kuaförü</title>
+<meta name="description" content="10 yılı aşkın süredir kesim, renklendirme ve saç bakımında uzmanlaşmış ekibimizi tanıyın.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anonimkadinkuafor.vercel.app/hakkimizda.html">
+<meta property="og:title" content="Hakkımızda — Anonim Kadın Kuaförü">
+<meta property="og:description" content="On yıllık bir tutku.">
+<meta property="og:image" content="https://anonimkadinkuafor.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo-512.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+  })();
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Anonim <span class="logo-dim">Kuaför</span></a>
+    <nav class="nav-links">
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="salonumuz.html">Salonumuz</a>
+      <a href="ekibimiz.html">Ekibimiz</a>
+      <a href="hakkimizda.html" class="active">Hakkımızda</a>
+      <a href="yorumlar.html">Yorumlar</a>
+      <a href="sss.html">SSS</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Karanlık modu aç/kapat">
+        <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+      </button>
+      <a href="iletisim.html" class="nav-cta">Randevu Al</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="salonumuz.html">Salonumuz</a>
+    <a href="ekibimiz.html">Ekibimiz</a>
+    <a href="hakkimizda.html" class="active">Hakkımızda</a>
+    <a href="yorumlar.html">Yorumlar</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="about" id="hakkimizda">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hakkımızda</span>
+      <h2>On yıllık bir tutku.</h2>
+    </div>
+    <div class="about-inner reveal">
+      <p>Anonim Kadın Kuaförü, 10 yılı aşkın süredir kesim, renklendirme ve saç bakımında uzmanlaşmış bir ekiple hizmet veriyor. Amacımız sadece bir işlem yapmak değil, her ziyaretinizi kendinize ayrılmış özel bir zaman haline getirmek.</p>
+      <p>Kullandığımız ürünleri ve uyguladığımız teknikleri sürekli güncel tutuyor, her müşterimize saç yapısına ve ihtiyacına özel bir yaklaşım sunuyoruz.</p>
+      <p class="about-signature">Saçlarınız, en özel aksesuarınızdır.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Anonim Kadın Kuaförü</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

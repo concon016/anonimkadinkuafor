@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekibimiz — Anonim Kadın Kuaförü</title>
+<meta name="description" content="Anonim Kadın Kuaförü'nün kesim, renklendirme ve özel gün şekillendirmesinde uzman ekibiyle tanışın.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anonimkadinkuafor.vercel.app/ekibimiz.html">
+<meta property="og:title" content="Ekibimiz — Anonim Kadın Kuaförü">
+<meta property="og:description" content="Alanında deneyimli uzman ekibimizle tanışın.">
+<meta property="og:image" content="https://anonimkadinkuafor.vercel.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo-512.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+  })();
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Anonim <span class="logo-dim">Kuaför</span></a>
+    <nav class="nav-links">
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="salonumuz.html">Salonumuz</a>
+      <a href="ekibimiz.html" class="active">Ekibimiz</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="yorumlar.html">Yorumlar</a>
+      <a href="sss.html">SSS</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Karanlık modu aç/kapat">
+        <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+      </button>
+      <a href="iletisim.html" class="nav-cta">Randevu Al</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="salonumuz.html">Salonumuz</a>
+    <a href="ekibimiz.html" class="active">Ekibimiz</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="yorumlar.html">Yorumlar</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="team" id="ekibimiz">
+    <div class="section-head reveal">
+      <span class="eyebrow">Ekibimiz</span>
+      <h2>Saçlarınıza güvenebileceğiniz bir ekip.</h2>
+      <p>Her biri kendi alanında deneyimli, düzenli eğitimlerle kendini güncel tutan uzmanlarımızla tanışın.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&amp;w=400&amp;auto=format&amp;fit=crop" alt="Ayşe Kara" loading="lazy">
+        </div>
+        <div class="team-name">Ayşe Kara</div>
+        <div class="team-role">Kurucu &amp; Baş Kuaför</div>
+        <p class="team-bio">10 yılı aşkın deneyimiyle kesim ve şekillendirmede uzmanlaşmış, salonun kurucusu.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&amp;w=400&amp;auto=format&amp;fit=crop" alt="Ece Demir" loading="lazy">
+        </div>
+        <div class="team-name">Ece Demir</div>
+        <div class="team-role">Renklendirme Uzmanı</div>
+        <p class="team-bio">Röfle, balyaj ve fantazi renk uygulamalarında uzman, her saç tonuna özel çözümler sunuyor.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&amp;w=400&amp;auto=format&amp;fit=crop" alt="Zeynep Polat" loading="lazy">
+        </div>
+        <div class="team-name">Zeynep Polat</div>
+        <div class="team-role">Gelin Saçı &amp; Şekillendirme Uzmanı</div>
+        <p class="team-bio">Özel gün saçlarında detaycı yaklaşımıyla kalıcı ve fotojenik sonuçlar yaratıyor.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Anonim Kadın Kuaförü</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
